@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>White Crust</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              bgColor1: '#151515',
+              bgColor2: '#151515',
+            },
+            
+          },
+          // spacing: {
+          //   '13': '3.25rem',
+          //   '15': '3.75rem',
+          //   '128': '32rem',
+          //   '144': '36rem',
+          // }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      .primary-font{
+        font-family: 'Poppins'
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-full p-6 bg-bgColor1 py-10 px-10">
+      <nav class="">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+          <!-- Logo on the left -->
+          <div>
+            <a href="#" class="text-white text-2xl font-bold">
+              <img src="./logo.png" alt="logo" />
+            </a>
+          </div>
+          <!-- Navigation items centered on larger screens -->
+          <div class="hidden md:flex items-center justify-center space-x-4 flex-1 primary-font">
+            <a href="#" class="text-white hover:text-gray-300">The Firm</a>
+            <a href="#" class="text-white hover:text-gray-300">What We Do</a>
+            <a href="#" class="text-white hover:text-gray-300">Our Impact</a>
+            <a href="#" class="text-white hover:text-gray-300">News & Insights</a>
+            <a href="#" class="text-white hover:text-gray-300">Careers</a>
+          </div>
+          <!-- Hamburger icon for mobile -->
+          <div class="md:hidden">
+            <button id="menu-toggle" class="text-white text-xl focus:outline-none">&#9776;</button>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- Responsive menu for smaller screens -->
+      <div id="mobile-menu" class="md:hidden bg-gray-800 py-2 hidden">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col space-y-2">
+          <a href="#" class="text-white hover:text-gray-300">Home</a>
+          <a href="#" class="text-white hover:text-gray-300">About</a>
+          <a href="#" class="text-white hover:text-gray-300">Services</a>
+          <a href="#" class="text-white hover:text-gray-300">Contact</a>
+        </div>
+      </div>
+      <div class="text-white primary-font py-20">
+        <h1 class="text-5xl">Build With <br/> White Crust Limited</h1>
+        <p class="mt-4">At White Crust, we pave the way to financial success through <br/>
+          strategic investments tailored just for you.</p>
+      </div>
+      <div class="flex items-center justify-center text-white primary-font">
+        <iframe width="560" height="315" src="http://www.youtube.com/watch?v=t0Q2otsqC4I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+   
+
+    
+  </body>
+
+  <script>
+    // Toggle mobile menu visibility
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</html>

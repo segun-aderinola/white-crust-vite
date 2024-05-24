@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>White Crust</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <!-- <script src="https://unpkg.com/jos-animation@0.9.0-beta"></script> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <script>
@@ -62,10 +63,10 @@
           <!-- Navigation items centered on larger screens -->
           <div class="hidden md:flex items-center justify-center space-x-4 flex-1 secondary-font">
             <a href="./firm" class="text-white hover:text-gray-300">The Firm</a>
-            <a href="#" class="text-white hover:text-gray-300">What We Do</a>
-            <a href="#" class="text-white hover:text-gray-300">Our Impact</a>
-            <a href="#" class="text-white hover:text-gray-300">News & Insights</a>
-            <a href="#" class="text-white hover:text-gray-300">Careers</a>
+            <a href="./agriculture" class="text-white hover:text-gray-300">What We Do</a>
+            <a href="./clients" class="text-white hover:text-gray-300">Our Impact</a>
+            <a href="./credits.html" class="text-white hover:text-gray-300">News & Insights</a>
+            <a href="./careers" class="text-white hover:text-gray-300">Careers</a>
           </div>
           <!-- Hamburger icon for mobile -->
           <div class="md:hidden">
@@ -78,13 +79,13 @@
       <div id="mobile-menu" class="md:hidden bg-gray-800 py-2 hidden">
         <div class="max-w-7xl mx-auto px-4 flex flex-col space-y-2 gap-6">
           <a href="./firm" class="text-white hover:text-gray-300">The Firm</a>
-          <a href="#" class="text-white hover:text-gray-300">What We Do</a>
-          <a href="#" class="text-white hover:text-gray-300">Our Impact</a>
-          <a href="#" class="text-white hover:text-gray-300">News & Insights</a>
+          <a href="./agriculture" class="text-white hover:text-gray-300">What We Do</a>
+          <a href="./clients" class="text-white hover:text-gray-300">Our Impact</a>
+          <a href="./credits.html" class="text-white hover:text-gray-300">News & Insights</a>
           <a href="./careers" class="text-white hover:text-gray-300">Careers</a>
         </div>
       </div>
-      <div class="container mx-auto p-8 text-white primary-font py-20">
+      <div class="container mx-auto p-8 text-white primary-font py-20 pt-20 md:pt-40">
         <h1 class="text-4xl md:text-7xl">Build With <br/> White Crust Limited</h1>
         <p class="mt-4">At White Crust, we pave the way to financial success through <br/>
           strategic investments tailored just for you.</p>
@@ -94,7 +95,7 @@
       </div>
     </div>
 
-    <div class="pt-6">
+    <div class="pt-6 jos" data-jos_animation="fade">
       <div class="container mx-auto grid md:grid-cols-3 gap-6 p-10">
           <!-- Build Financial Security -->
           <div class="bg-white rounded-lg overflow-hidden">
@@ -124,7 +125,7 @@
     </div>
 
     <div class="bg-bgColor1 pt-6 text-white">
-      <div class="container mx-auto p-8">
+      <div class="container mx-auto p-2 md:p-8">
         <h1 class="text-4xl font-bold mb-6 p-10">OUR <br /> FLYWHEEL</h1>
           <div class="flex flex-col md:flex-row gap-6 items-stretch">
               <!-- Left side: Video -->
@@ -133,7 +134,7 @@
               </div>
               <!-- Right side: Text content -->
               <div class="bg-greyColor flex-1 p-8">
-                  <div class="p-8">
+                  <div class="md:p-8">
                       <div class="pt-8 pb-8">
                           <h2 class="text-xl font-bold mb-2">WHAT CAN WE BE THE BEST IN THE WORLD AT</h2>
                           <p class="pt-5">Providing The Widest Range Of Reliable, Innovative And Profitable Alternative Investments To Africans All Over The World.</p>
@@ -154,19 +155,19 @@
       </div>
    </div>
 
-   <div class="pt-20 pb-20">
+   <div class="pl-10 pt-10 md:pt-20 pb-20">
       <div class="container mx-auto">
-        <h1 class="text-7xl">Build With <br/>
+        <h1 class="text-3xl md:text-7xl">Build With <br/>
           White Crust Limited</h1>
           <p class="pt-8">At White Crust, we pave the way to financial success through <br/>
             strategic investments tailored just for you.</p>
       </div>
    </div>
-    <div class="pt-40 pb-20 bg-bgColor1">
+    <div class="pt-10 md:pt-20 bg-bgColor1">
         <div class="container mx-auto text-white flex items-center justify-center text-center pb-8">
           <div>
             <h4 class="text-4xl">Stay Up To Date</h4>
-            <h6 class="text-5xl pt-4">Get our latest insights <br/> and firm announcements</h6>
+            <h6 class="text-3xl md:text-5xl pt-4">Get our latest insights <br/> and firm announcements</h6>
           </div>
         </div>
         <div class="container mx-auto">
@@ -184,7 +185,7 @@
           
       </div>
 
-      <div class="container mx-auto text-white flex items-start justify-between pt-40 flex-wrap gap-10 p-6">
+      <div class="container mx-auto text-white flex items-start justify-between pt-20 md:pt-40 flex-wrap gap-10 p-6">
         <div class="">
             <h1 class="text-4xl">Build with <br/>White Crust Limited</h1>
         </div>
@@ -232,8 +233,8 @@
 
     
   </body>
-
   <script>
+    // JOS.init();
     // Toggle mobile menu visibility
     document.getElementById('menu-toggle').addEventListener('click', function() {
       var mobileMenu = document.getElementById('mobile-menu');

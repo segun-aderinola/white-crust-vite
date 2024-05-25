@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>White Crust</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <!-- <script src="https://unpkg.com/jos-animation@0.9.0-beta"></script> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <!-- <script src="https://unpkg.com/jos-animation@0.9.0-beta"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              clifford: '#da373d',
-              bgColor1: '#151515',
-              greyColor: '#2D2D2D',
-            },    
+              clifford: "#da373d",
+              bgColor1: "#151515",
+              greyColor: "#2D2D2D",
+            },
           },
-        }
-      }
+        },
+      };
     </script>
     <style type="text/tailwindcss">
       @layer utilities {
@@ -39,15 +42,15 @@
       transform: scale(0.9);
       transform-origin: top center; 
     } */
-    .primary-font{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      .primary-font {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         font-weight: 400;
       }
       .secondary-font {
-      font-family: "Noto Sans Mongolian", sans-serif;
-      font-weight: 300;
-      font-style: normal;
-}
+        font-family: "Noto Sans Mongolian", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
     </style>
   </head>
   <body>
@@ -61,135 +64,358 @@
             </a>
           </div>
           <!-- Navigation items centered on larger screens -->
-          <div class="hidden md:flex items-center justify-center space-x-4 flex-1 secondary-font">
-            <a href="./firm" class="text-white hover:text-gray-300">The Firm</a>
-            <a href="./agriculture" class="text-white hover:text-gray-300">What We Do</a>
-            <a href="./clients" class="text-white hover:text-gray-300">Our Impact</a>
-            <a href="./credits" class="text-white hover:text-gray-300">News & Insights</a>
-            <a href="./careers" class="text-white hover:text-gray-300">Careers</a>
-          <a href="./venture-capital" class="text-white hover:text-gray-300">Venture Capital</a>
+          <div
+            class="hidden md:flex items-center justify-center space-x-4 flex-1 secondary-font"
+          >
+            <!-- The Firm -->
+            <div class="relative group">
+              <a href="#" class="text-white hover:text-gray-300"
+                >The Firm</a
+              >
+              <div
+                class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+              >
+                <a
+                  href="./firm"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >The Firm</a
+                >
+                <a href="./ourpeople" class="block px-4 py-2 hover:bg-gray-200"
+                  >Our People</a
+                >
+              </div>
+            </div>
+
+            <!-- What We Do -->
+            <div class="relative group">
+              <a href="#" class="text-white hover:text-gray-300"
+                >What We Do</a
+              >
+              <div
+                class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+              >
+                <a
+                  href="./realestate"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Real Estate</a
+                >
+                <a
+                  href="./agriculture"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Agriculture & Commodities</a
+                >
+                <a
+                  href="./venture-capital"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Venture Capital</a
+                >
+                <a
+                  href="./credits"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Credits</a
+                >
+              </div>
+            </div>
+
+            <!-- Our Impact -->
+            <div class="relative group">
+              <a href="./clients" class="text-white hover:text-gray-300"
+                >Our Impact</a
+              >
+            </div>
+
+            <!-- News & Insights -->
+            <div class="relative group">
+              <a href="#" class="text-white hover:text-gray-300"
+                >News & Insights</a
+              >
+            </div>
+
+            <!-- Careers -->
+            <div class="relative group">
+              <a href="./careers" class="text-white hover:text-gray-300"
+                >Careers</a
+              >
+            </div>
           </div>
+
           <!-- Hamburger icon for mobile -->
           <div class="md:hidden">
-            <button id="menu-toggle" class="text-white text-xl focus:outline-none">&#9776;</button>
+            <button
+              id="menu-toggle"
+              class="text-white text-3xl focus:outline-none"
+            >
+              &#9776;
+            </button>
           </div>
         </div>
       </nav>
-    
+
       <!-- Responsive menu for smaller screens -->
       <div id="mobile-menu" class="md:hidden bg-gray-800 py-2 hidden">
         <div class="max-w-7xl mx-auto px-4 flex flex-col space-y-2 gap-6">
-          <a href="./firm" class="text-white hover:text-gray-300">The Firm</a>
-          <a href="./agriculture" class="text-white hover:text-gray-300">What We Do</a>
-          <a href="./clients" class="text-white hover:text-gray-300">Our Impact</a>
-          <a href="./credits" class="text-white hover:text-gray-300">News & Insights</a>
-          <a href="./careers" class="text-white hover:text-gray-300">Careers</a>
-          <a href="./venture-capital" class="text-white hover:text-gray-300">Venture Capital</a>
+          <!-- The Firm -->
+           <div class="relative group">
+            <a href="#" class="text-white hover:text-gray-300"
+              >The Firm</a
+            >
+            <div
+              class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+            >
+              <a
+                href="./firm"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >The Firm</a
+              >
+              <a href="./ourpeople" class="block px-4 py-2 hover:bg-gray-200"
+                >Our People</a
+              >
+            </div>
+          </div>
+
+          <!-- What We Do -->
+          <div class="relative group">
+            <a href="#" class="text-white hover:text-gray-300"
+              >What We Do</a
+            >
+            <div
+              class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+            >
+              <a
+                href="./realestate"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Real Estate</a
+              >
+              <a
+                href="./agriculture"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Agriculture & Commodities</a
+              >
+              <a
+                href="./venture-capital"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Venture Capital</a
+              >
+              <a
+                href="./credits"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Credits</a
+              >
+            </div>
+          </div>
+
+          <!-- Our Impact -->
+          <div class="relative group">
+            <a href="./clients" class="text-white hover:text-gray-300"
+              >Our Impact</a
+            >
+          </div>
+
+          <!-- News & Insights -->
+          <div class="relative group">
+            <a href="#" class="text-white hover:text-gray-300"
+              >News & Insights</a
+            >
+          </div>
+
+          <!-- Careers -->
+          <div class="relative group">
+            <a href="./careers" class="text-white hover:text-gray-300"
+              >Careers</a
+            >
+          </div>
         </div>
       </div>
-      <div class="container mx-auto p-8 text-white primary-font py-20 pt-20 md:pt-40">
-        <h1 class="text-4xl md:text-7xl">Build With <br/> White Crust Limited</h1>
-        <p class="mt-4">At White Crust, we pave the way to financial success through <br/>
-          strategic investments tailored just for you.</p>
+
+      <div
+        class="container mx-auto p-8 text-white primary-font py-20 pt-20 md:pt-40"
+      >
+        <h1 class="text-4xl md:text-7xl">
+          Build With <br />
+          White Crust Limited
+        </h1>
+        <p class="mt-4">
+          At White Crust, we pave the way to financial success through <br />
+          strategic investments tailored just for you.
+        </p>
       </div>
-      <div class="flex items-center justify-center text-white primary-font pb-6 md:pb-8">
-        <iframe class="h-70 md:h-80" width="900" height="350vh" title="YouTube video" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div
+        class="flex items-center justify-center text-white primary-font pb-6 md:pb-8"
+      >
+        <iframe
+          class="h-70 md:h-80"
+          width="900"
+          height="350vh"
+          title="YouTube video"
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
 
     <div class="pt-6 jos" data-jos_animation="fade">
       <div class="container mx-auto grid md:grid-cols-3 gap-6 p-10">
-          <!-- Build Financial Security -->
-          <div class="bg-white rounded-lg overflow-hidden">
-              <img src="./skyscrapper.png" alt="Financial Security" class="w-full h-auto" style="height: 60%">
-              <div class="pt-6 pb-6">
-                  <h2 class="text-2xl md:text-xl mb-4">Build Financial Security</h2>
-                  <p class="text-gray-600">At White Crust, we foster an environment where exceptional individuals can shape enduring careers. Joining our team means pioneering new trends and defining industry benchmarks.</p>
-              </div>
+        <!-- Build Financial Security -->
+       
+        <div class="bg-white rounded-lg overflow-hidden">
+          <div class="relative flex justify-center align-items-center">
+            <img class="w-full h-full md:h-3/4" src="./skyscrapper.png" alt="white house" />
           </div>
-          <!-- Build your career -->
-          <div class="bg-white rounded-lg overflow-hidden">
-              <img src="./engineer.png" alt="Career" class="w-full h-auto" style="height: 60%;">
-              <div class="pt-6 pb-6">
-                  <h2 class="text-2xl mb-4">Build your career</h2>
-                  <p class="text-gray-600">At White Crust, we foster an environment where exceptional individuals can shape enduring careers. Joining our team means pioneering new trends and defining industry benchmarks.</p>
-              </div>
+          <div class="pr-4 md:pr-14 pt-6 pb-6">
+            <h2 class="text-2xl md:text-xl mb-4">Build Financial Security</h2>
+            <p class="text-gray-600">
+              At White Crust, we foster an environment where exceptional
+              individuals can shape enduring careers. Joining our team means
+              pioneering new trends and defining industry benchmarks.
+            </p>
           </div>
-          <!-- Build Strong Businesses -->
-          <div class="bg-white rounded-lg overflow-hidden">
-              <img src="./planning.png" alt="Strong Businesses" class="w-full h-auto" style="height: 60%">
-              <div class="pt-6 pb-6">
-                  <h2 class="text-2xl mb-4">Build Strong Businesses</h2>
-                  <p class="text-gray-600">We provide businesses with a comprehensive suite of tools and resources to foster their growth.</p>
-              </div>
+        </div>
+        <!-- Build your career -->
+        <div class="bg-white rounded-lg overflow-hidden">
+          <div class="relative flex justify-center align-items-center">
+            <img class="w-full h-full md:h-3/4" src="./engineer.png" alt="career" />
           </div>
+          <div class="pr-4 md:pr-14 pt-6 pb-6">
+            <h2 class="text-2xl md:text-xl mb-4">Build your career</h2>
+            <p class="text-gray-600">
+              At White Crust, we foster an environment where exceptional
+              individuals can shape enduring careers. Joining our team means
+              pioneering new trends and defining industry benchmarks.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Build Strong Businesses -->
+        <div class="bg-white rounded-lg overflow-hidden">
+          <div class="relative flex justify-center align-items-center">
+            <img class="w-full h-full md:h-3/4" src="./planning.png" alt="Strong Businesses" />
+          </div>
+          <div class="pr-4 md:pr-14 pt-6 pb-6">
+            <h2 class="text-2xl md:text-xl mb-4">Build Strong Businesses</h2>
+            <p class="text-gray-600">
+              We provide businesses with a comprehensive suite of tools and resources to foster their growth.
+            </p>
+          </div>
+        </div>
+        
       </div>
     </div>
 
     <div class="bg-bgColor1 pt-6 text-white">
       <div class="container mx-auto p-2 md:p-8">
-        <h1 class="text-4xl font-bold mb-6 p-10">OUR <br /> FLYWHEEL</h1>
-          <div class="flex flex-col md:flex-row gap-6 items-stretch">
-              <!-- Left side: Video -->
-              <div class="relative flex-1">
-                  <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h1 class="text-4xl font-bold mb-6 p-10">
+          OUR <br />
+          FLYWHEEL
+        </h1>
+        <div class="flex flex-col md:flex-row gap-6 items-stretch">
+          <!-- Left side: Video -->
+          <div class="relative flex-1">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Right side: Text content -->
+          <div class="bg-greyColor flex-1 p-8">
+            <div class="md:p-8">
+              <div class="pt-8 pb-8">
+                <h2 class="text-xl font-bold mb-2">
+                  WHAT CAN WE BE THE BEST IN THE WORLD AT
+                </h2>
+                <p class="pt-5">
+                  Providing The Widest Range Of Reliable, Innovative And
+                  Profitable Alternative Investments To Africans All Over The
+                  World.
+                </p>
               </div>
-              <!-- Right side: Text content -->
-              <div class="bg-greyColor flex-1 p-8">
-                  <div class="md:p-8">
-                      <div class="pt-8 pb-8">
-                          <h2 class="text-xl font-bold mb-2">WHAT CAN WE BE THE BEST IN THE WORLD AT</h2>
-                          <p class="pt-5">Providing The Widest Range Of Reliable, Innovative And Profitable Alternative Investments To Africans All Over The World.</p>
-                      </div>
-                      <hr class="border-white-600">
-                      <div class="pt-8 pb-8">
-                          <h2 class="text-xl font-bold mb-2">WHAT DRIVES OUR ECONOMIC ENGINE</h2>
-                          <p class="pt-5">Profit Per Satisfied Investors (Investment Objective Exceeded)</p>
-                      </div>
-                      <hr class="border-white-600">
-                      <div class="pt-8 pb-8">
-                          <h2 class="text-xl font-bold mb-2">WHAT ARE WE PASSIONATE ABOUT</h2>
-                          <p class="pt-5">Financial Freedom For Africans All Over The World. BHAG Actively Lead 10 Million Africans Towards Financial Freedom In The Next Five Years</p>
-                      </div>
-                  </div>
+              <hr class="border-white-600" />
+              <div class="pt-8 pb-8">
+                <h2 class="text-xl font-bold mb-2">
+                  WHAT DRIVES OUR ECONOMIC ENGINE
+                </h2>
+                <p class="pt-5">
+                  Profit Per Satisfied Investors (Investment Objective Exceeded)
+                </p>
               </div>
-        </div>
-      </div>
-   </div>
-
-   <div class="pl-10 pt-10 md:pt-20 pb-20">
-      <div class="container mx-auto">
-        <h1 class="text-3xl md:text-7xl">Build With <br/>
-          White Crust Limited</h1>
-          <p class="pt-8">At White Crust, we pave the way to financial success through <br/>
-            strategic investments tailored just for you.</p>
-      </div>
-   </div>
-    <div class="pt-10 md:pt-20 bg-bgColor1">
-        <div class="container mx-auto text-white flex items-center justify-center text-center pb-8">
-          <div>
-            <h4 class="text-4xl">Stay Up To Date</h4>
-            <h6 class="text-3xl md:text-5xl pt-4">Get our latest insights <br/> and firm announcements</h6>
+              <hr class="border-white-600" />
+              <div class="pt-8 pb-8">
+                <h2 class="text-xl font-bold mb-2">
+                  WHAT ARE WE PASSIONATE ABOUT
+                </h2>
+                <p class="pt-5">
+                  Financial Freedom For Africans All Over The World. BHAG
+                  Actively Lead 10 Million Africans Towards Financial Freedom In
+                  The Next Five Years
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="container mx-auto">
-          <form class="">
-            <div class="flex flex-wrap gap-6 p-5">
+      </div>
+    </div>
 
-              <input type="text" placeholder="Full name" class="flex-1 p-2 border border-gray-300">
-              <input type="text" placeholder="E-mail" class="flex-1 p-2 border border-gray-300">
-              <input type="text" placeholder="Phone Number" class="flex-1 p-2 border border-gray-300">
-            </div>
-            <div class="flex justify-center pt-4">
-              <button type="submit" class="px-8 py-2 bg-greyColor text-white">Submit</button>
-            </div>
-          </form>
-          
+    <div class="pl-10 pt-10 md:pt-20 pb-20">
+      <div class="container mx-auto">
+        <h1 class="text-3xl md:text-7xl">
+          Build With <br />
+          White Crust Limited
+        </h1>
+        <p class="pt-8">
+          At White Crust, we pave the way to financial success through <br />
+          strategic investments tailored just for you.
+        </p>
+      </div>
+    </div>
+    <div class="pt-10 md:pt-20 bg-bgColor1">
+      <div
+        class="container mx-auto text-white flex items-center justify-center text-center pb-8"
+      >
+        <div>
+          <h4 class="text-4xl">Stay Up To Date</h4>
+          <h6 class="text-3xl md:text-5xl pt-4">
+            Get our latest insights <br />
+            and firm announcements
+          </h6>
+        </div>
+      </div>
+      <div class="container mx-auto">
+        <form class="">
+          <div class="flex flex-wrap gap-6 p-5">
+            <input
+              type="text"
+              placeholder="Full name"
+              class="flex-1 p-2 border border-gray-300"
+            />
+            <input
+              type="text"
+              placeholder="E-mail"
+              class="flex-1 p-2 border border-gray-300"
+            />
+            <input
+              type="text"
+              placeholder="Phone Number"
+              class="flex-1 p-2 border border-gray-300"
+            />
+          </div>
+          <div class="flex justify-center pt-4">
+            <button type="submit" class="px-8 py-2 bg-greyColor text-white">
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
 
-      <div class="container mx-auto text-white flex items-start justify-between pt-20 md:pt-40 flex-wrap gap-10 p-6">
+      <div
+        class="container mx-auto text-white flex items-start justify-between pt-20 md:pt-40 flex-wrap gap-10 p-6"
+      >
         <div class="">
-            <h1 class="text-4xl">Build with <br/>White Crust Limited</h1>
+          <h1 class="text-4xl">Build with <br />White Crust Limited</h1>
         </div>
         <div class="flex items-start justify-between gap-10 sm:gap-10">
           <div>
@@ -218,8 +444,6 @@
               <li class="pt-4">admin@white-crust.com</li>
             </ul>
           </div>
-         
-            
         </div>
       </div>
       <div class="text-white p-8">
@@ -227,23 +451,44 @@
         <p class="pt-8">
           <span id="date"></span>
           <span>White Crust Limited</span>
-      </p>
+        </p>
       </div>
     </div>
-   
-
-
-    
   </body>
   <script>
     // JOS.init();
     // Toggle mobile menu visibility
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-      var mobileMenu = document.getElementById('mobile-menu');
-      mobileMenu.classList.toggle('hidden');
-    });
+    document
+      .getElementById("menu-toggle")
+      .addEventListener("click", function () {
+        var mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      });
     const date = new Date();
     const year = date.getFullYear();
-    document.getElementById('date').innerHTML = year;
+    document.getElementById("date").innerHTML = year;
+
+
+    
+  const dropdownToggles = document.querySelectorAll('.group');
+
+  // Loop through each dropdown toggle
+  dropdownToggles.forEach(dropdownToggle => {
+    // Add click event listener
+    dropdownToggle.addEventListener('click', () => {
+      // Toggle the visibility of the dropdown menu
+      const dropdownMenu = dropdownToggle.querySelector('.absolute');
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+    // Hide dropdown menu when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!dropdownToggle.contains(event.target)) {
+        const dropdownMenu = dropdownToggle.querySelector('.absolute');
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+  });
+
   </script>
 </html>

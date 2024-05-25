@@ -57,18 +57,81 @@
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <!-- Logo on the left -->
           <div>
-            <a href="./index.html" class="text-2xl font-bold">
+            <a href="./index" class="text-2xl font-bold">
               <img src="./logo.png" alt="logo" />
             </a>
           </div>
           <!-- Navigation items centered on larger screens -->
           <div class="hidden md:flex items-center justify-center space-x-4 flex-1 secondary-font">
-            <a href="./firm" class="hover:text-gray-300">The Firm</a>
-            <a href="./agriculture" class="hover:text-gray-300">What We Do</a>
-            <a href="./clients" class="hover:text-gray-300">Our Impact</a>
-            <a href="./credits" class="hover:text-gray-300">News & Insights</a>
-            <a href="./careers" class="hover:text-gray-300">Careers</a>
-            <a href="./venture-capital" class="hover:text-gray-300">Venture Capital</a>
+            <div class="relative group">
+              <a href="#" class="hover:text-gray-300"
+                >The Firm</a
+              >
+              <div
+                class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+              >
+                <a
+                  href="./firm"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >The Firm</a
+                >
+                <a href="./ourpeople" class="block px-4 py-2 hover:bg-gray-200"
+                  >Our People</a
+                >
+              </div>
+            </div>
+
+            <!-- What We Do -->
+            <div class="relative group">
+              <a href="#" class="hover:text-gray-300"
+                >What We Do</a
+              >
+              <div
+                class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+              >
+                <a
+                  href="./realestate"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Real Estate</a
+                >
+                <a
+                  href="./agriculture"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Agriculture & Commodities</a
+                >
+                <a
+                  href="./venture-capital"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Venture Capital</a
+                >
+                <a
+                  href="./credits"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Credits</a
+                >
+              </div>
+            </div>
+
+            <!-- Our Impact -->
+            <div class="relative group">
+              <a href="./clients" class="hover:text-gray-300"
+                >Our Impact</a
+              >
+            </div>
+
+            <!-- News & Insights -->
+            <div class="relative group">
+              <a href="#" class="hover:text-gray-300"
+                >News & Insights</a
+              >
+            </div>
+
+            <!-- Careers -->
+            <div class="relative group">
+              <a href="./careers" class="hover:text-gray-300"
+                >Careers</a
+              >
+            </div>
           </div>
           <!-- Hamburger icon for mobile -->
           <div class="md:hidden">
@@ -80,12 +143,75 @@
       <!-- Responsive menu for smaller screens -->
       <div id="mobile-menu" class="md:hidden py-2 hidden">
         <div class="max-w-7xl mx-auto px-4 flex flex-col space-y-2 gap-6">
-          <a href="./firm" class="hover:text-gray-300">The Firm</a>
-          <a href="./agriculture" class="hover:text-gray-300">What We Do</a>
-          <a href="./clients" class="hover:text-gray-300">Our Impact</a>
-          <a href="./credits" class="hover:text-gray-300">News & Insights</a>
-          <a href="./careers" class="hover:text-gray-300">Careers</a>
-          <a href="./venture-capital" class="hover:text-gray-300">Venture Capital</a>
+          <div class="relative group">
+            <a href="#" class="hover:text-gray-300"
+              >The Firm</a
+            >
+            <div
+              class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+            >
+              <a
+                href="./firm"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >The Firm</a
+              >
+              <a href="./ourpeople" class="block px-4 py-2 hover:bg-gray-200"
+                >Our People</a
+              >
+            </div>
+          </div>
+
+          <!-- What We Do -->
+          <div class="relative group">
+            <a href="#" class="hover:text-gray-300"
+              >What We Do</a
+            >
+            <div
+              class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+            >
+              <a
+                href="./realestate"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Real Estate</a
+              >
+              <a
+                href="./agriculture"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Agriculture & Commodities</a
+              >
+              <a
+                href="./venture-capital"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Venture Capital</a
+              >
+              <a
+                href="./credits"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Credits</a
+              >
+            </div>
+          </div>
+
+          <!-- Our Impact -->
+          <div class="relative group">
+            <a href="./clients" class="hover:text-gray-300"
+              >Our Impact</a
+            >
+          </div>
+
+          <!-- News & Insights -->
+          <div class="relative group">
+            <a href="#" class="hover:text-gray-300"
+              >News & Insights</a
+            >
+          </div>
+
+          <!-- Careers -->
+          <div class="relative group">
+            <a href="./careers" class="hover:text-gray-300"
+              >Careers</a
+            >
+          </div>
         </div>
       </div>
       <div class="container mx-auto p-2 md:p-8 primary-font py-20">
@@ -242,5 +368,26 @@
     const date = new Date();
     const year = date.getFullYear();
     document.getElementById('date').innerHTML = year;
+
+        
+  const dropdownToggles = document.querySelectorAll('.group');
+
+// Loop through each dropdown toggle
+dropdownToggles.forEach(dropdownToggle => {
+  // Add click event listener
+  dropdownToggle.addEventListener('click', () => {
+    // Toggle the visibility of the dropdown menu
+    const dropdownMenu = dropdownToggle.querySelector('.absolute');
+    dropdownMenu.classList.toggle('hidden');
+  });
+
+  // Hide dropdown menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!dropdownToggle.contains(event.target)) {
+      const dropdownMenu = dropdownToggle.querySelector('.absolute');
+      dropdownMenu.classList.add('hidden');
+    }
+  });
+});
   </script>
 </html>

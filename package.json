@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "copyfiles '*.html' _redirects dist",
+    "build": "copyfiles '*.html' && ncp public dist",
     "preview": "vite preview"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "gulp": "^5.0.0",
+    "ncp": "^2.0.0",
     "vite": "^5.2.0"
   }
 }

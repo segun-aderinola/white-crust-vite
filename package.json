@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node gulpfile.cjs && copyfiles '*.html' && rsync -av --exclude='.*' public/ dist",
+    "build": "copyfiles '*.html' dist",
     "preview": "vite preview"
   },
   "devDependencies": {

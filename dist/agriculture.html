@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>White Crust</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              bgColor1: '#151515',
+              greyColor: '#2D2D2D',
+            },    
+          },
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      /* html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        
+    }
+    body {
+      transform: scale(0.9);
+      transform-origin: top center; 
+    } */
+    .primary-font{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 400;
+      }
+      .secondary-font {
+      font-family: "Noto Sans Mongolian", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+}
+    </style>
+  </head>
+  <body>
+    <div class="w-full p-6 bg-bgColor1 py-10 px-10">
+      <nav class="">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+          <!-- Logo on the left -->
+          <div>
+            <a href="./index" class="text-white text-2xl font-bold">
+              <img src="./logo.png" alt="logo" />
+            </a>
+          </div>
+          <!-- Navigation items centered on larger screens -->
+          <div class="hidden md:flex items-center justify-center space-x-4 flex-1 secondary-font">
+            <div class="relative group">
+              <a href="#" class="text-white hover:text-gray-300"
+                >The Firm</a
+              >
+              <div
+                class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+              >
+                <a
+                  href="./firm"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >The Firm</a
+                >
+                <a href="./ourpeople" class="block px-4 py-2 hover:bg-gray-200"
+                  >Our People</a
+                >
+              </div>
+            </div>
+
+            <!-- What We Do -->
+            <div class="relative group">
+              <a href="#" class="text-white hover:text-gray-300"
+                >What We Do</a
+              >
+              <div
+                class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+              >
+                <a
+                  href="./realestate"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Real Estate</a
+                >
+                <a
+                  href="./agriculture"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Agriculture & Commodities</a
+                >
+                <a
+                  href="./venture-capital"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Venture Capital</a
+                >
+                <a
+                  href="./credits"
+                  class="block px-4 py-2 hover:bg-gray-200"
+                  >Credits</a
+                >
+              </div>
+            </div>
+
+            <!-- Our Impact -->
+            <div class="relative group">
+              <a href="./clients" class="text-white hover:text-gray-300"
+                >Our Impact</a
+              >
+            </div>
+
+            <!-- News & Insights -->
+            <div class="relative group">
+              <a href="#" class="text-white hover:text-gray-300"
+                >News & Insights</a
+              >
+            </div>
+
+            <!-- Careers -->
+            <div class="relative group">
+              <a href="./careers" class="text-white hover:text-gray-300"
+                >Careers</a
+              >
+            </div>
+          </div>
+          <!-- Hamburger icon for mobile -->
+          <div class="md:hidden">
+            <button id="menu-toggle" class="text-white text-4xl focus:outline-none">&#9776;</button>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- Responsive menu for smaller screens -->
+      <div id="mobile-menu" class="md:hidden bg-gray-800 py-2 hidden">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col space-y-2 gap-6">
+          <div class="relative group">
+            <a href="#" class="text-white hover:text-gray-300"
+              >The Firm</a
+            >
+            <div
+              class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+            >
+              <a
+                href="./firm"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >The Firm</a
+              >
+              <a href="./ourpeople" class="block px-4 py-2 hover:bg-gray-200"
+                >Our People</a
+              >
+            </div>
+          </div>
+
+          <!-- What We Do -->
+          <div class="relative group">
+            <a href="#" class="text-white hover:text-gray-300"
+              >What We Do</a
+            >
+            <div
+              class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
+            >
+              <a
+                href="./realestate"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Real Estate</a
+              >
+              <a
+                href="./agriculture"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Agriculture & Commodities</a
+              >
+              <a
+                href="./venture-capital"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Venture Capital</a
+              >
+              <a
+                href="./credits"
+                class="block px-4 py-2 hover:bg-gray-200"
+                >Credits</a
+              >
+            </div>
+          </div>
+
+          <!-- Our Impact -->
+          <div class="relative group">
+            <a href="./clients" class="text-white hover:text-gray-300"
+              >Our Impact</a
+            >
+          </div>
+
+          <!-- News & Insights -->
+          <div class="relative group">
+            <a href="#" class="text-white hover:text-gray-300"
+              >News & Insights</a
+            >
+          </div>
+
+          <!-- Careers -->
+          <div class="relative group">
+            <a href="./careers" class="text-white hover:text-gray-300"
+              >Careers</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto p-4 md:p-8 text-white primary-font py-20 text-center ">
+        <h1 class="text-4xl md:text-5xl pt-10 md:pt-20">AGRICULTURE / <br> COMMODITIES </h1>
+        <p class="secondary-font pt-10 text-xl">White Crust Limited specializes in comprehensive management of the entire value chain of Cashew and Sorghum.</p>
+      </div>
+      <div class="flex items-center justify-center text-white primary-font pb-6 md:pb-8">
+        <img class="h-70 md:h-70 w-full md:3/4" title="image" src="./tractor.png" />
+      </div>
+      <div class="mt-4 text-center text-white pl-10 md:pl-20 pr-10 md:pr-20 text-xl secondary-font">
+        Our services span from meticulous planning and cultivation to state-of-the-art processing, efficient storage solutions, and seamless export facilitation. With a <br/> focus on these premium commodities, we ensure excellence at every stage, <br/> guaranteeing top-notch quality and a streamlined journey from planting to global export.
+      </div>
+    </div>
+    <div class="flex items-center justify-center text-white primary-font pt-6 pb-6 md:pb-8">
+      <iframe class="h-70 md:h-80" width="900" height="350vh" title="YouTube video" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="mt-4 text-center pl-10 md:pl-20 pr-10 md:pr-20 pb-20 text-xl">
+      White Crust Limited prides itself on being the premier partner for <br/> those seeking expertise and reliability in the Cashew and <br/> Sorghum industry's complete lifecycle.
+
+    </div>
+    <div class="pt-10 md:pt-20 bg-bgColor1">
+      <div class="container mx-auto text-white flex items-center justify-center text-center pb-8">
+        <div>
+          <h4 class="text-4xl">Stay Up To Date</h4>
+          <h6 class="text-3xl md:text-5xl pt-4">Get our latest insights <br/> and firm announcements</h6>
+        </div>
+      </div>
+      <div class="container mx-auto">
+        <form class="">
+          <div class="flex flex-wrap gap-6 p-5">
+  
+            <input type="text" placeholder="Full name" class="flex-1 p-2 border border-gray-300">
+            <input type="text" placeholder="E-mail" class="flex-1 p-2 border border-gray-300">
+            <input type="text" placeholder="Phone Number" class="flex-1 p-2 border border-gray-300">
+          </div>
+          <div class="flex justify-center pt-4">
+            <button type="submit" class="px-8 py-2 bg-greyColor text-white">Submit</button>
+          </div>
+        </form>
+        
+    </div>
+  
+    <div class="container mx-auto text-white flex items-start justify-between pt-20 md:pt-40 flex-wrap gap-10 p-6">
+      <div class="">
+          <h1 class="text-4xl">Build with <br/>White Crust Limited</h1>
+      </div>
+      <div class="flex items-start justify-between gap-10 sm:gap-10">
+        <div>
+          <h4 class="text-xl">Whitecrust</h4>
+          <ul class="pt-4 space-y-4">
+            <li class="pt-4"><a href="">The Firm</a></li>
+            <li class="pt-4"><a href="">Our People</a></li>
+            <li class="pt-4"><a href="">Insights</a></li>
+            <li class="pt-4"><a href="">Career</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul class="pt-4 space-y-4">
+            <li class="pt-4">LinkedIn</li>
+            <li class="pt-4">Instagram</li>
+            <li class="pt-4">TikTok</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in Touch</h4>
+          <ul class="pt-4 space-y-4">
+            <li class="pt-4">No 29 Kigoma Street Wuse Zone 7, Abuja</li>
+            <li class="pt-4">+234 9123638542</li>
+            <li class="pt-4">Insights</li>
+            <li class="pt-4">admin@white-crust.com</li>
+          </ul>
+        </div>
+       
+          
+      </div>
+    </div>
+    <div class="text-white p-8">
+      <hr />
+      <p class="pt-8">
+        <span id="date"></span>
+        <span>White Crust Limited</span>
+    </p>
+    </div>
+  </div>
+   
+
+
+    
+  </body>
+
+  <script>
+    // Toggle mobile menu visibility
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    const date = new Date();
+    const year = date.getFullYear();
+    document.getElementById('date').innerHTML = year;
+
+        
+  const dropdownToggles = document.querySelectorAll('.group');
+
+// Loop through each dropdown toggle
+dropdownToggles.forEach(dropdownToggle => {
+  // Add click event listener
+  dropdownToggle.addEventListener('click', () => {
+    // Toggle the visibility of the dropdown menu
+    const dropdownMenu = dropdownToggle.querySelector('.absolute');
+    dropdownMenu.classList.toggle('hidden');
+  });
+
+  // Hide dropdown menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!dropdownToggle.contains(event.target)) {
+      const dropdownMenu = dropdownToggle.querySelector('.absolute');
+      dropdownMenu.classList.add('hidden');
+    }
+  });
+});
+  </script>
+</html>

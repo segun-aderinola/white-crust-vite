@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "copyfiles '*.html' && rsync -av --exclude='.*' public/ dist",
+    "build": "copyfiles '*.html'",
     "preview": "vite preview"
   },
   "devDependencies": {

@@ -7,6 +7,8 @@
     <title>White Crust</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- <script src="https://unpkg.com/jos-animation@0.9.0-beta"></script> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
@@ -18,7 +20,7 @@
           extend: {
             colors: {
               clifford: "#da373d",
-              bgColor1: "#151515",
+              bgColor1: "#000",
               greyColor: "#2D2D2D",
             },
           },
@@ -228,7 +230,7 @@
       </div>
 
       <div
-        class="container mx-auto p-8 text-white primary-font py-20 pt-20 md:pt-40"
+        class="container mx-auto p-8 text-white primary-font py-20 pt-20 md:pt-40" data-aos="fade-right" data-aos-duration="3000"
       >
         <h1 class="text-4xl md:text-7xl">
           Build With <br />
@@ -259,7 +261,7 @@
       <div class="container mx-auto grid md:grid-cols-3 gap-6 p-10">
         <!-- Build Financial Security -->
        
-        <div class="bg-white rounded-lg overflow-hidden">
+        <div class="bg-white rounded-lg overflow-hidden" data-aos="zoom-in-right" data-aos-duration="3000">
           <div class="relative flex justify-center align-items-center">
             <img class="w-full h-full md:h-3/4" src="./skyscrapper.png" alt="white house" />
           </div>
@@ -273,7 +275,7 @@
           </div>
         </div>
         <!-- Build your career -->
-        <div class="bg-white rounded-lg overflow-hidden">
+        <div class="bg-white rounded-lg overflow-hidden" data-aos="zoom-in-down" data-aos-duration="3000">
           <div class="relative flex justify-center align-items-center">
             <img class="w-full h-full md:h-3/4" src="./engineer.png" alt="career" />
           </div>
@@ -288,7 +290,7 @@
         </div>
   
         <!-- Build Strong Businesses -->
-        <div class="bg-white rounded-lg overflow-hidden">
+        <div class="bg-white rounded-lg overflow-hidden" data-aos="zoom-in-left" data-aos-duration="3000">
           <div class="relative flex justify-center align-items-center">
             <img class="w-full h-full md:h-3/4" src="./planning.png" alt="Strong Businesses" />
           </div>
@@ -305,7 +307,7 @@
 
     <div class="bg-bgColor1 pt-6 text-white">
       <div class="container mx-auto p-2 md:p-8">
-        <h1 class="text-4xl font-bold mb-6 p-10">
+        <h1 class="text-4xl font-bold mb-6 p-10" data-aos="fade-right" data-aos-duration="3000">
           OUR <br />
           FLYWHEEL
         </h1>
@@ -324,7 +326,7 @@
           <!-- Right side: Text content -->
           <div class="bg-greyColor flex-1 p-8">
             <div class="md:p-8">
-              <div class="pt-8 pb-8">
+              <div class="pt-8 pb-8" data-aos="fade-down-left" data-aos-duration="1000">
                 <h2 class="text-xl font-bold mb-2">
                   WHAT CAN WE BE THE BEST IN THE WORLD AT
                 </h2>
@@ -335,7 +337,7 @@
                 </p>
               </div>
               <hr class="border-white-600" />
-              <div class="pt-8 pb-8">
+              <div class="pt-8 pb-8" data-aos="fade-down-left" data-aos-duration="2000">
                 <h2 class="text-xl font-bold mb-2">
                   WHAT DRIVES OUR ECONOMIC ENGINE
                 </h2>
@@ -344,7 +346,7 @@
                 </p>
               </div>
               <hr class="border-white-600" />
-              <div class="pt-8 pb-8">
+              <div class="pt-8 pb-8" data-aos="fade-down-left" data-aos-duration="3000">
                 <h2 class="text-xl font-bold mb-2">
                   WHAT ARE WE PASSIONATE ABOUT
                 </h2>
@@ -362,11 +364,11 @@
 
     <div class="pl-10 pt-10 md:pt-20 pb-20">
       <div class="container mx-auto">
-        <h1 class="text-3xl md:text-7xl">
+        <h1 class="text-3xl md:text-7xl" data-aos="zoom-in" data-aos-duration="3000">
           Build With <br />
           White Crust Limited
         </h1>
-        <p class="pt-8">
+        <p class="pt-8" data-aos="fade-right" data-aos-duration="3000">
           At White Crust, we pave the way to financial success through <br />
           strategic investments tailored just for you.
         </p>
@@ -455,8 +457,10 @@
       </div>
     </div>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script>
-    // JOS.init();
+      AOS.init();
     // Toggle mobile menu visibility
     document
       .getElementById("menu-toggle")

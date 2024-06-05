@@ -53,105 +53,77 @@
         font-weight: 300;
         font-style: normal;
       }
+      .group:hover .group-hover\:block {
+        display: block;
+    }
+    a:hover {
+      cursor:pointer;
+    }
     </style>
   </head>
   <body>
     <div class="p-6 bg-bgColor1 md:py-10 md:px-10">
-      <nav class="">
+      <nav class="bg-black p-4">
         <div class="w-full mx-auto px-4 flex justify-between items-center">
-          <!-- Logo on the left -->
-          <div>
-            <a href="./index" class="text-white text-2xl font-bold">
-              <img src="./logo.png" alt="logo" />
-            </a>
-          </div>
-          <!-- Navigation items centered on larger screens -->
-          <div
-            class="hidden md:flex items-center justify-center space-x-4 flex-1 secondary-font"
-          >
-            <!-- The Firm -->
-            <div class="relative group">
-              <a href="#" class="text-white hover:text-gray-300"
-                >The Firm</a
-              >
-              <div
-                class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
-              >
-                <a
-                  href="./firm"
-                  class="block px-4 py-2 hover:bg-gray-200"
-                  >The Firm</a
-                >
-                <a href="./ourpeople" class="block px-4 py-2 hover:bg-gray-200"
-                  >Our People</a
-                >
-              </div>
+            <!-- Logo on the left -->
+            <div>
+                <a href="./index" class="text-white text-2xl font-bold">
+                    <img src="./logo.png" alt="logo" />
+                </a>
             </div>
-
-            <!-- What We Do -->
-            <div class="relative group">
-              <a href="#" class="text-white hover:text-gray-300"
-                >What We Do</a
-              >
-              <div
-                class="absolute left-0 hidden mt-2 w-48 bg-white text-black rounded shadow-lg group-hover:block"
-              >
-                <a
-                  href="./realestate"
-                  class="block px-4 py-2 hover:bg-gray-200"
-                  >Real Estate</a
-                >
-                <a
-                  href="./agriculture"
-                  class="block px-4 py-2 hover:bg-gray-200"
-                  >Agriculture & Commodities</a
-                >
-                <a
-                  href="./venture-capital"
-                  class="block px-4 py-2 hover:bg-gray-200"
-                  >Venture Capital</a
-                >
-                <a
-                  href="./credits"
-                  class="block px-4 py-2 hover:bg-gray-200"
-                  >Credits</a
-                >
-              </div>
+            <!-- Navigation items centered on larger screens -->
+            <div class="hidden md:flex items-center justify-center space-x-4 flex-1 secondary-font">
+                <!-- The Firm -->
+                <div class="relative group">
+                    <button id="dropdownHoverButton" class="text-white hover:text-gray-300 z-20">
+                        The Firm
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownHover" class="absolute left-0 hidden w-48 bg-white text-black rounded shadow-lg group-hover:block z-10">
+                        <a href="./firm" class="block px-4 py-2 hover:bg-gray-200">The Firm</a>
+                        <a href="./ourpeople" class="block px-4 py-2 hover:bg-gray-200">Our People</a>
+                    </div>
+                </div>
+    
+                <!-- What We Do -->
+                <div class="relative group">
+                    <button id="dropdownHoverButton2" class="text-white hover:text-gray-300 z-20">
+                        What We Do
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownHover2" class="absolute left-0 hidden w-48 bg-white text-black rounded shadow-lg group-hover:block z-10">
+                        <a href="./realestate" class="block px-4 py-2 hover:bg-gray-200">Real Estate</a>
+                        <a href="./agriculture" class="block px-4 py-2 hover:bg-gray-200">Agriculture & Commodities</a>
+                        <a href="./venture-capital" class="block px-4 py-2 hover:bg-gray-200">Venture Capital</a>
+                        <a href="./credits" class="block px-4 py-2 hover:bg-gray-200">Credits</a>
+                    </div>
+                </div>
+    
+                <!-- Our Impact -->
+                <div class="relative group">
+                    <a href="./clients" class="text-white hover:text-gray-300">Our Impact</a>
+                </div>
+    
+                <!-- News & Insights -->
+                <div class="relative group">
+                    <a href="#" class="text-white hover:text-gray-300">News & Insights</a>
+                </div>
+    
+                <!-- Careers -->
+                <div class="relative group">
+                    <a href="./careers" class="text-white hover:text-gray-300">Careers</a>
+                </div>
             </div>
-
-            <!-- Our Impact -->
-            <div class="relative group">
-              <a href="./clients" class="text-white hover:text-gray-300"
-                >Our Impact</a
-              >
+    
+            <!-- Hamburger icon for mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white text-4xl focus:outline-none">
+                    &#9776;
+                </button>
             </div>
-
-            <!-- News & Insights -->
-            <div class="relative group">
-              <a href="#" class="text-white hover:text-gray-300"
-                >News & Insights</a
-              >
-            </div>
-
-            <!-- Careers -->
-            <div class="relative group">
-              <a href="./careers" class="text-white hover:text-gray-300"
-                >Careers</a
-              >
-            </div>
-          </div>
-
-          <!-- Hamburger icon for mobile -->
-          <div class="md:hidden">
-            <button
-              id="menu-toggle"
-              class="text-white text-4xl focus:outline-none"
-            >
-              &#9776;
-            </button>
-          </div>
         </div>
-      </nav>
+    </nav>
+    
 
       <!-- Responsive menu for smaller screens -->
       <div id="mobile-menu" class="md:hidden bg-gray-800 py-2 hidden">
@@ -423,27 +395,27 @@
           <div>
             <h4 class="text-xl">Whitecrust</h4>
             <ul class="pt-4 space-y-4">
-              <li class="pt-4"><a href="">The Firm</a></li>
-              <li class="pt-4"><a href="">Our People</a></li>
-              <li class="pt-4"><a href="">Insights</a></li>
-              <li class="pt-4"><a href="">Career</a></li>
+              <li class="pt-4 hover:text-gray-300"><a href="firm">The Firm</a></li>
+              <li class="pt-4 hover:text-gray-300"><a href="ourpeople">Our People</a></li>
+              <li class="pt-4 hover:text-gray-300"><a href="#">Insights</a></li>
+              <li class="pt-4 hover:text-gray-300"><a href="careers">Career</a></li>
             </ul>
           </div>
           <div>
             <h4>Get in touch</h4>
             <ul class="pt-4 space-y-4">
-              <li class="pt-4">LinkedIn</li>
-              <li class="pt-4">Instagram</li>
-              <li class="pt-4">TikTok</li>
+              <li class="pt-4 hover:text-gray-300">LinkedIn</li>
+              <li class="pt-4 hover:text-gray-300">Instagram</li>
+              <li class="pt-4 hover:text-gray-300">TikTok</li>
             </ul>
           </div>
           <div>
             <h4>Get in Touch</h4>
             <ul class="pt-4 space-y-4">
-              <li class="pt-4">No 29 Kigoma Street Wuse Zone 7, Abuja</li>
-              <li class="pt-4">+234 9123638542</li>
-              <li class="pt-4">Insights</li>
-              <li class="pt-4">admin@white-crust.com</li>
+              <li class="pt-4 hover:text-gray-300">No 29 Kigoma Street Wuse Zone 7, Abuja</li>
+              <li class="pt-4 hover:text-gray-300">+234 9123638542</li>
+              <!-- <li class="pt-4">Insights</li> -->
+              <li class="pt-4 hover:text-gray-300">admin@white-crust.com</li>
             </ul>
           </div>
         </div>
@@ -473,26 +445,54 @@
     document.getElementById("date").innerHTML = year;
 
 
-    
-  const dropdownToggles = document.querySelectorAll('.group');
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const dropdownHoverButton = document.getElementById('dropdownHoverButton');
+    const dropdownHover = document.getElementById('dropdownHover');
 
-  // Loop through each dropdown toggle
-  dropdownToggles.forEach(dropdownToggle => {
-    // Add click event listener
-    dropdownToggle.addEventListener('click', () => {
-      // Toggle the visibility of the dropdown menu
-      const dropdownMenu = dropdownToggle.querySelector('.absolute');
-      dropdownMenu.classList.toggle('hidden');
+    dropdownHoverButton.addEventListener('mouseover', () => {
+        dropdownHover.classList.remove('hidden');
     });
 
-    // Hide dropdown menu when clicking outside
-    document.addEventListener('click', (event) => {
-      if (!dropdownToggle.contains(event.target)) {
-        const dropdownMenu = dropdownToggle.querySelector('.absolute');
-        dropdownMenu.classList.add('hidden');
-      }
+    dropdownHoverButton.addEventListener('mouseout', (event) => {
+        if (!dropdownHover.contains(event.relatedTarget)) {
+            dropdownHover.classList.add('hidden');
+        }
     });
-  });
+
+    dropdownHover.addEventListener('mouseover', () => {
+        dropdownHover.classList.remove('hidden');
+    });
+
+    dropdownHover.addEventListener('mouseout', (event) => {
+        if (!dropdownHoverButton.contains(event.relatedTarget)) {
+            dropdownHover.classList.add('hidden');
+        }
+    });
+
+    const dropdownHoverButton2 = document.getElementById('dropdownHoverButton2');
+    const dropdownHover2 = document.getElementById('dropdownHover2');
+
+    dropdownHoverButton2.addEventListener('mouseover', () => {
+        dropdownHover2.classList.remove('hidden');
+    });
+
+    dropdownHoverButton2.addEventListener('mouseout', (event) => {
+        if (!dropdownHover2.contains(event.relatedTarget)) {
+            dropdownHover2.classList.add('hidden');
+        }
+    });
+
+    dropdownHover2.addEventListener('mouseover', () => {
+        dropdownHover2.classList.remove('hidden');
+    });
+
+    dropdownHover2.addEventListener('mouseout', (event) => {
+        if (!dropdownHoverButton2.contains(event.relatedTarget)) {
+            dropdownHover2.classList.add('hidden');
+        }
+    });
+});
+
 
   </script>
 </html>

@@ -5,6 +5,8 @@
       { "source": "/realestate", "destination": "/realestate.html" },
       { "source": "/agriculture", "destination": "/agriculture.html" },
       { "source": "/venture-capital", "destination": "/venture-capital.html" },
-      { "source": "/credits", "destination": "/credits.html" }
+      { "source": "/credits", "destination": "/credits.html" },
+      { "source": "/clients", "destination": "/clients.html" },
+      { "source": "/careers", "destination": "/careers.html" }
     ]
   }
